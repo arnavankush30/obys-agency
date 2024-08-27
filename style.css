@@ -1,3 +1,13 @@
+@font-face {
+  font-family: plain-light;
+  src: url(./fonts/plain-light-webfont.ttf);
+  font-family: plain regular;
+  src: url(./fonts/plain-regular-webfont.ttf);
+  font-family: "silk serif";
+  src: url(./fonts/silkserif-lightitalic-webfont.ttf);
+  font-family: "silk serif italic";
+  src: url(./fonts/silkserif-regularitalic-webfont.ttf);
+}
 * {
   margin: 0;
   padding: 0;
@@ -10,6 +20,17 @@ html,
 body {
   height: 100%;
   width: 100%;
+}
+
+#crsr {
+  height: 2vw;
+  width: 2vw;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.5764705882);
+  position: fixed;
+  z-index: 999;
+  mix-blend-mode: difference;
+  transform: translate(-50%, -50%);
 }
 
 #loader {
@@ -101,4 +122,62 @@ h6 {
 #page1 {
   width: 100vw;
   height: 100vh;
+}
+
+#nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2.3vw 5.5vw;
+}
+
+#nav-part2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3vw;
+}
+
+#nav-part2 h4 {
+  font-size: 0.8vw;
+  font-weight: 500;
+}
+
+.hero {
+  position: relative;
+  width: 72%;
+  margin-left: 27%;
+  height: -moz-fit-content;
+  height: fit-content;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  z-index: 999;
+}
+
+.hero:nth-child(2) {
+  margin-top: 18vh;
+}
+
+.hero h1 {
+  font-size: 7.2vw;
+  text-transform: uppercase;
+  line-height: 7.2vw;
+}
+
+.hero h2,
+h3 {
+  font-size: 7.2vw;
+  text-transform: uppercase;
+  line-height: 7.2vw;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.hero h2:hover {
+  -webkit-text-stroke: 2px white;
+  color: transparent;
+  font-weight: 500;
 }/*# sourceMappingURL=style.css.map */
