@@ -70,7 +70,7 @@ body {
 }
 
 #line1-part1 h5,
-h6 {
+#line1-part1 h6 {
   font-size: 3vw;
   font-weight: 100;
   font-family: "silk serif";
@@ -126,7 +126,7 @@ h6 {
 }
 #page1 {
   width: 100vw;
-  height: 100vh;
+  height: 80vh;
 }
 
 #nav {
@@ -149,15 +149,15 @@ h6 {
 }
 
 .hero {
-  position: relative;
+  /* background-color: red; */
   width: 72%;
   margin-left: 27%;
   height: -moz-fit-content;
   height: fit-content;
-  overflow: hidden;
+  /* background-color: red; */
+  overflow-y: hidden;
   display: flex;
   align-items: center;
-  z-index: 999;
 }
 
 .hero:nth-child(2) {
@@ -166,8 +166,20 @@ h6 {
 
 .hero h1 {
   font-size: 7.2vw;
+  font-weight: 600;
   text-transform: uppercase;
   line-height: 7.2vw;
+  position: relative;
+}
+
+#hero1::before {
+  content: "01";
+  position: absolute;
+  font-size: 3vw;
+  font-weight: 100;
+  font-family: "silk serif";
+  left: 20%;
+  top: 29%;
 }
 
 .hero h2 {
@@ -255,6 +267,17 @@ h6 {
 #page4-content h1 {
   font-size: 7vw;
   text-transform: uppercase;
+  position: relative;
+}
+
+#page4-content h1::before {
+  content: "03";
+  position: absolute;
+  font-size: 3vw;
+  font-family: "silk serif";
+  font-weight: 100;
+  left: -12%;
+  top: 8%;
 }
 
 #page4-content .underline {
@@ -314,4 +337,122 @@ h6 {
 #page5 {
   min-height: 100vh;
   width: 100%;
+  position: relative;
+}
+
+.elem {
+  white-space: nowrap;
+  overflow-x: hidden !important;
+  margin-bottom: -2vw;
+}
+
+.elem h1 {
+  font-size: 8vw;
+  -webkit-text-stroke: 1px #fff;
+  font-weight: 400;
+  color: transparent;
+  text-transform: uppercase;
+  display: inline-block;
+  margin-right: 1vw;
+  animation-name: infinite-scroll;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes infinite-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - 20px));
+  }
+}
+.elem2 {
+  white-space: nowrap;
+  overflow-x: hidden !important;
+  margin-bottom: -1vw;
+}
+
+.elem2 h1 {
+  font-size: 8vw;
+  -webkit-text-stroke: 1px #fff;
+  font-weight: 400;
+  color: transparent;
+  text-transform: uppercase;
+  display: inline-block;
+  transform: translate(calc(-100% - 20px));
+  animation-name: infinite-scroll;
+  animation-iteration-count: infinite;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-direction: reverse;
+}
+
+.elem span {
+  font-style: italic;
+  font-family: "silk serif";
+  color: transparent;
+}
+
+.elem2 span {
+  font-style: italic;
+  font-family: "silk serif";
+  color: transparent;
+}
+
+#footer {
+  height: 80vh;
+  width: 95%;
+  position: relative;
+  padding-left: 28vw;
+}
+
+#footer h1 {
+  font-size: 7vw;
+  width: 60vw;
+  text-transform: uppercase;
+  position: relative;
+}
+
+#footer h1:before {
+  content: "04";
+  position: absolute;
+  font-size: 3vw;
+  font-family: "silk serif";
+  font-weight: 100;
+  left: -12%;
+  top: 8%;
+}
+
+.underline-footer {
+  height: 1px;
+  width: 85%;
+  background-color: #fff;
+  margin-top: 1vw;
+}
+
+#footer-div {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 80%;
+  padding: 4vw 0;
+}
+
+#footer-div h6 {
+  font-size: 1vw;
+  margin-bottom: 2vw;
+}
+
+#footer-div h5 {
+  margin-top: 1vw;
+  font-size: 1.5vw;
+  margin: 0.2vh 0;
+  font-weight: 500;
+}
+
+#footer > h5 {
+  font-weight: 500;
+  font-size: 1vw;
 }/*# sourceMappingURL=style.css.map */
